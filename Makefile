@@ -4,7 +4,7 @@ default: help
 all: emacs.pdf less.pdf  ## Generate all cheatsheets
 
 %.pdf: %.md  ## Make PDF
-	pandoc $< -o $@ -V classoption=supertabular -V geometry=landscape -V papersize=a4paper # -V classoption=twocolumn
+	pandoc $< -o $@ -V papersize=a4paper #-V geometry=landscape -V classoption=twocolumn
 
 clean: ## Clean generated files
 	rm -f *.pdf

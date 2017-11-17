@@ -5,3 +5,4 @@
 |**Command**|**Function**|
 |-|-|
 |C-g|Cancel|
+|C-/|Undo|

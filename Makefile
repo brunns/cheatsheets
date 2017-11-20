@@ -4,8 +4,8 @@ default: help
 pdfs: emacs.pdf less.pdf  ## Generate all PDF cheatsheets
 odts: emacs.odt less.odt  ## Generate all Open Dcumment format cheatsheets
 
-%.pdf: %.md  ## Make PDF
-	pandoc $< -o $@ --latex-engine=xelatex -V geometry:paperwidth=210mm -V geometry:paperheight=99mm -V geometry=landscape # -V papersize=a4paper -V classoption=twocolumn
+%.pdf: %.odt  ## Make PDF
+	soffice --convert-to pdf $< --headless
 
 %.odt: %.md  ## Make ODT
 	pandoc $< -o $@ --normalize --reference-odt=template/reference.odt

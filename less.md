@@ -22,19 +22,19 @@
 |k|Back one page|
 |%*n*|Go to *n* percent of the file|
 |(, { or [|Go to matching bracket|
-|:n|Next file|
+|:n|Next file (when invoked with multiple or globbed files)|
 |:p|Previous file|
 
 ## Search
 
 |**Command**|**Function**|
 |-|-|
-|/foo|Search for *foo*|
-|?foo|Search backwards|
+|/*foo*|Search for *foo*|
+|?*foo*|Search backwards|
 |n|Next match|
 |N|Previous match|
-|/!foo|Find lines not matching *foo*|
-|/*foo|Find *foo* in all files|
+|/!*foo*|Find lines not matching *foo*|
+|/\**foo*|Find *foo* in all files|
 
 ## Misc
 

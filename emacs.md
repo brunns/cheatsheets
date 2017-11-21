@@ -1,4 +1,4 @@
-% Emacs cheatsheet
+# Emacs cheatsheet
 
 ## General
 

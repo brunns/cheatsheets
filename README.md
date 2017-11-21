@@ -4,4 +4,4 @@ Various cheetsheets in [Markdown](https://en.wikipedia.org/wiki/Markdown) format
 
 ## TODO
 
-I'd like to generate the PDFs directly with pandoc, but this issue - [longtable not compatible with 2-column LaTeX documents](https://github.com/jgm/pandoc/issues/1023 - is preventing me, so I'm resorting to `soffice`.
+I'd like to generate the PDFs directly with pandoc, but this issue - [longtable not compatible with 2-column LaTeX documents](https://github.com/jgm/pandoc/issues/1023) - is preventing me, so I'm resorting to `soffice`.

@@ -23,13 +23,14 @@
 |-|-|
 |C-space|Start marking|
 |C-x h|Mark all|
-|C-w|Cut|
-|M-w|Copy|
-|C-d|Delete|
+|C-w|Cut from mark to point|
+|M-w|Copy "|
+|C-d|Delete "|
 |C-y|Paste ("Yank")|
 |M-y|Paste older items|
+|C-x r t *foo*|Rectangular edit - type *foo*| 
 
-Control & cursor keys work for marking regions too, followed by C-w or M-w.
+Control & cursor keys work for marking regions too, followed by C-w or M-w or so forth.
 
 ## Search and Replace
 
@@ -66,6 +67,8 @@ Control & cursor keys work for marking regions too, followed by C-w or M-w.
 
 |**Command**|**Function**|
 |-|-|
+|C-v|Page down|
+|M-v|Page up|
 |M-g M-g|Goto line|
 |M->|End|
 |M-<|Start|
@@ -87,6 +90,9 @@ I.e. record and playback
 |**Command**|**Function**|
 |-|-|
 |C-x C-t|Transpose lines|
+|C-h t|Tutorial|
+|C-h r|Manual|
+|C-h C-h|Help about help|
 
 ## Key
 

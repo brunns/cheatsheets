@@ -41,7 +41,7 @@
 |**Command**|**Function**|
 |-|-|
 |q|Quit|
-|%foo|Filter - show only lines containing *foo*|
+|%*foo*|Filter - show only lines containing *foo*|
 |F|Follow mode|
 |-S|Wrap on/off|
 |h|Help|

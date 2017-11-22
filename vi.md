@@ -1,4 +1,4 @@
-% Vi & Vim cheatsheet
+# Vi & Vim Cheatsheet
 
 ## General
 

@@ -16,6 +16,7 @@
 |C-x C-f|Open file|
 |C-x C-s|Save file|
 |C-x C-w|Save as|
+|C-x s|Save all buffers|
 
 ## Cut 'n' Paste
 
@@ -57,6 +58,8 @@ Control & cursor keys work for marking regions too, followed by C-w or M-w or so
 |-|-|
 |C-x b|Switch to buffer (by name)|
 |C-x C-b|List buffers (and select)|
+|C-x →|Next buffer|
+|C-x ←|Previous buffer|
 |C-x 0|Close current window|
 |C-x 1|Close other windows|
 |C-x 2|Split windows vertically ◒|
@@ -84,6 +87,14 @@ I.e. record and playback
 |C-x e|Execute|
 |.. e|Execute again|
 |ESC *n* C-x e|Execute *n* times|
+
+## Python
+
+|**Command**|**Function**|
+|-|-|
+|C-c !|Python shell|
+|C-c C-c|Execute current buffer|
+|C-c C-t|insert `import ipdb; ipdb.set_trace()`|
 
 ## Misc
 

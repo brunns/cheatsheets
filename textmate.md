@@ -34,3 +34,4 @@
 |⇧|Shift|
 |⌃|Ctrl|
 |⌘|Command|
+|⌥|Alt|

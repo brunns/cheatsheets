@@ -82,7 +82,7 @@ I.e. record and playback
 |C-x (|Start recording|
 |C-x )|Finish reording|
 |C-x e|Execute|
-|.. c|Execute again|
+|.. e|Execute again|
 |ESC *n* C-x e|Execute *n* times|
 
 ## Misc
@@ -96,5 +96,7 @@ I.e. record and playback
 
 ## Key
 
-* C = Ctrl
-* M = Esc (usually)
+|**Symbol**|**Key**|
+|-|-|
+|C|Ctrl|
+|M|Alt (usually)|

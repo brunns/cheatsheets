@@ -6,6 +6,8 @@
 |-|-|
 |⌘t|Quick open|
 |⌘r|Run file|
+|⌃⌘r|Show file in file browser|
+|⌃⌘n|New file in folder|
 
 ## Search and replace
 
@@ -24,3 +26,11 @@
 |⌃⌘ (↑↓)|Move line|
 |⌘]|Indent|
 |⌘[|Dedent|
+
+## Key
+
+|**Symbol**|**Key**|
+|-|-|
+|⇧|Shift|
+|⌃|Ctrl|
+|⌘|Command|

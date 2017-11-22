@@ -1,8 +1,7 @@
 default: help
 .PHONY: help
 
-pdfs: emacs.pdf less.pdf  ## Generate all PDF cheatsheets
-odts: emacs.odt less.odt  ## Generate all Open Dcumment format cheatsheets
+all: emacs.pdf less.pdf textmate.pdf  ## Generate all PDF cheatsheets
 
 %.pdf: %.odt  ## Make PDF
 	soffice --convert-to pdf $< --headless

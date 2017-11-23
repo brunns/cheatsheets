@@ -2,7 +2,7 @@
 
 Various cheetsheets in [Markdown](https://en.wikipedia.org/wiki/Markdown) format. PDFs and documents generated with [pandoc](https://pandoc.org/) and [LibreOffice](https://www.libreoffice.org/)'s `soffice` command line tool, both of which need to be installed. Run `make help` for options.
 
-Edit `*.md` files to edit the cheatsheets, and add new ones to the [Makefile](Makefile). For formatting, edit the page settings and/or styles in [templates/reference.odt](templates/reference.odt).
+Edit `*.md` files to edit the cheatsheets. For formatting, edit the page settings and/or styles in [templates/reference.odt](templates/reference.odt).
 
 ## TODO
 

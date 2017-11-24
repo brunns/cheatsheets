@@ -18,6 +18,15 @@
 |C-x C-w|Save as|
 |C-x s|Save all buffers|
 
+## Editing
+
+|**Command**|**Function**|
+|-|-|
+|C-k|Delete to end of line|
+|C-DEL|Delete next word|
+|M-BKS|Delete pevious word|
+|M-^|Join with previous line|
+
 ## Cut 'n' Paste
 
 |**Command**|**Function**|
@@ -41,12 +50,13 @@ Control & cursor keys work for marking regions too, followed by C-w or M-w or so
 |C-r|Search backwards|
 |ESC C-s|Regexp search|
 |ESC C-r|Regexp backwards|
+|M-v replace-regexp RET *pattern* RET *replacement*|Regexp replace|
 
 ### Query replace
 
 |**Command**|**Function**|
 |-|-|
-|ESC %|Query replace|
+|ESC % RET *replace* RET *replacement*|Query replace|
 |Space or y|Replace|
 |DEL or n|Skip|
 |!|Replace all|
@@ -104,6 +114,14 @@ I.e. record and playback
 |C-h t|Tutorial|
 |C-h r|Manual|
 |C-h C-h|Help about help|
+|M-x load-theme|Load theme|
+
+## Init options
+
+In `~/.emacs`, or (better) `~/.emacs.d/init.el`, probably. Example:
+
+    ;; Theme
+    (load-theme 'deeper-blue)
 
 ## Key
 

@@ -26,6 +26,8 @@
 |C-DEL|Delete next word|
 |M-BKS|Delete pevious word|
 |M-^|Join with previous line|
+|M-t|Transpose word to right|
+|C-x C-t|Transpose lines|
 
 ## Cut 'n' Paste
 
@@ -110,7 +112,6 @@ I.e. record and playback
 
 |**Command**|**Function**|
 |-|-|
-|C-x C-t|Transpose lines|
 |C-h t|Tutorial|
 |C-h r|Manual|
 |C-h C-h|Help about help|

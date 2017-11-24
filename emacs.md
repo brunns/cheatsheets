@@ -27,7 +27,7 @@
 |M-BKS|Delete pevious word|
 |M-^|Join with previous line|
 |M-t|Transpose word to right|
-|C-x C-t|Transpose lines|
+|C-x C-t|Transpose lines[^1]|
 
 ## Cut 'n' Paste
 
@@ -129,4 +129,6 @@ In `~/.emacs`, or (better) `~/.emacs.d/init.el`, probably. Example:
 |**Symbol**|**Key**|
 |-|-|
 |C|Ctrl|
-|M|Alt (usually)|
+|M|Meta, usually Alt.|
+
+[^1]: Move the line above, and the cursor, both down one line.

@@ -6,7 +6,7 @@
 |-|-|
 |q|Quit|
 |R|Refresh|
-|Ctrl-g|Show position|
+|= or Ctrl-g|Show filename & position|
 
 ## Navigation
 

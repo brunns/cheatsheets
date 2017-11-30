@@ -8,6 +8,7 @@
 |C-/|Undo|
 |C-x C-c|Quit|
 |F10|Menu|
+|M-x ansi-term|Open terminal|
 
 ## Files
 
@@ -116,6 +117,7 @@ I.e. record and playback
 |C-h r|Manual|
 |C-h C-h|Help about help|
 |M-x load-theme|Load theme|
+|C-x * Q|Quick calc|
 
 ## Init options
 

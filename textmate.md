@@ -23,6 +23,8 @@
 |-|-|
 |F5|Sort lines|
 |⌃⇧d|Duplicate line|
+|⌃⇧k|Delete line|
+|⌃⇧j|Join with next line|
 |⌃⌘ (↑↓)|Move line|
 |⌘]|Indent|
 |⌘[|Dedent|

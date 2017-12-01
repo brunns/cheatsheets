@@ -119,12 +119,14 @@ I.e. record and playback
 |M-x load-theme|Load theme|
 |C-x * Q|Quick calc|
 
-## Init options
+## Custom
 
-In `~/.emacs`, or (better) `~/.emacs.d/init.el`, probably. Example:
+(Only with [my `~/.emacs.d/init.el`](https://gist.github.com/brunns/0e2f82f110c499b308e03f7cc34250b8).)
 
-    ;; Theme
-    (load-theme 'deeper-blue)
+|**Command**|**Function**|
+|-|-|
+|M-↑|Move line up|
+|M-↓|Move line down|
 
 ## Key
 

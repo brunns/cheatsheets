@@ -6,3 +6,5 @@
 |-|-|
 |ESC :q!|GTFO. All you need, really.|
 |ESC :wq|Write and exit.|
+|ESC :x|Write and exit more cheaply.|
+|ESC :e!|Undo everything & start again.|

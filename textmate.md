@@ -8,6 +8,7 @@
 |⌘r|Run file|
 |⌃⌘r|Show file in file browser|
 |⌃⌘n|New file in folder|
+|^⌘t|Search for command|
 
 ## Search and replace
 
@@ -15,6 +16,7 @@
 |-|-|
 |⇧⌘f|Find in project|
 |⌘f|Find|
+|^s|Incremental search|
 |⌘e|Use selection as find|
 
 ## Editing
@@ -28,6 +30,24 @@
 |⌃⌘ (↑↓)|Move line|
 |⌘]|Indent|
 |⌘[|Dedent|
+|⎋|Autocomplete|
+|⌥ mouse|Rectangular selection|
+|*trigger*⇥|Expand tab trigger|
+
+## Bookmarks
+
+|**Command**|**Function**|
+|-|-|
+|⌘-F2|Place bookmark|
+|F2|Navigate bookmarks|
+
+## Macros
+
+|**Command**|**Function**|
+|-|-|
+|⌥⌘m|Start/stop recording macro|
+|⇧⌘m|Playback macro|
+|^⌘m|Start/stop recording permanant macro|
 
 ## Key
 

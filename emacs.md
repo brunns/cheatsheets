@@ -27,6 +27,7 @@
 |C-DEL|Delete next word|
 |M-BKS|Delete pevious word|
 |M-^|Join with previous line|
+|C-t|Transpose two characters|
 |M-t|Transpose word to right|
 |C-x C-t|Transpose lines[^1]|
 

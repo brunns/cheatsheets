@@ -1,6 +1,14 @@
 # Vi & Vim Cheatsheet
 
-## General
+## Mode switching
+
+|**Command**|**Function**|
+|-|-|
+|ESC|Command mode|
+|INS or I|Insert mode|
+|R|Replace mode|
+
+## Comands (in command mode)
 
 |**Command**|**Function**|
 |-|-|

@@ -36,4 +36,8 @@
 |⇧|Shift|
 |⌃|Ctrl|
 |⌘|Command|
-|⌥|Alt|
+|⌥|Alt (aka Option)|
+|⎋|Escape|
+|↩|Return|
+|⇥|Tab|
+|↓←↑→|Arrow keys|

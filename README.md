@@ -8,6 +8,13 @@ Create and/or edit the `*.md` files, and run `make all` to generate PDFs. For fo
 
 Run `make help` for more options.
 
+### Docker usage
+
+If you'd rather not install the dependencies, you can build the sheets in [Docker](https://www.docker.com/):
+
+    docker build -t cheatsheets .
+    docker run -v `pwd`:/app cheatsheets make all
+
 ## TODO
 
 I'd like to generate the PDFs directly with pandoc, but this issue - [longtable not compatible with 2-column LaTeX documents](https://github.com/jgm/pandoc/issues/1023) - is preventing me from having tables in multi-column documents, so I'm resorting to `soffice`. Output's not so nice, but it's functional.

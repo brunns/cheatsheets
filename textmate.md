@@ -34,6 +34,17 @@
 |⌥ mouse|Rectangular selection|
 |*trigger*⇥|Expand tab trigger|
 
+## Git (& other SCMs)
+
+|**Command**|**Function**|
+|-|-|
+|⌘y|SCM menu[^bundle]|
+|⌘y 1|Show changes|
+|⌘y 2|Commit files|
+|⌘y 4|Push|
+|⌘y 8|Add to index|
+|⌘y 9|Show status|
+
 ## Bookmarks
 
 |**Command**|**Function**|
@@ -61,3 +72,5 @@
 |↩|Return|
 |⇥|Tab|
 |↓←↑→|Arrow keys|
+
+[^bundle]: Requires bundle installed

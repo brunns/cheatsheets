@@ -31,7 +31,7 @@
 |M-t|Transpose word to right|
 |C-x C-t|Transpose lines[^1]|
 
-## Cut 'n' Paste
+### Cut 'n' Paste
 
 |**Command**|**Function**|
 |-|-|
@@ -45,6 +45,16 @@
 |C-x r t *foo*|Rectangular edit - type *foo*| 
 
 Control & cursor keys work for marking regions too, followed by C-w or M-w or so forth.
+
+### Case Conversion
+
+|**Command**|**Function**|
+|-|-|
+|M-l|Convert following word to lower case (downcase-word)|
+|M-u|Convert following word to upper case (upcase-word)|
+|M-c|Capitalize the following word (capitalize-word)|
+|C-x C-l|Convert region to lower case (downcase-region)|
+|C-x C-u|Convert region to upper case (upcase-region)|
 
 ## Search and Replace
 

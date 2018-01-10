@@ -35,10 +35,13 @@ Start with `screen -dRR` - will reattach or create.
 |-|-|
 |^a d|Detach|
 |^a c|New window|
+|^a n|Next window|
 |^a ^a|Switch to last window|
 |^a "|Window list & selection|
+|^a k|Kill window|
 |^a S|Split vertically|
 |^a W|Split horizontally|
 |^a tab|Switch panes|
 |^a X|Close current pane|
 |^a Q|Close other panes|
+|^a H|Log session|

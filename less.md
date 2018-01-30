@@ -53,4 +53,5 @@
 |-p*foo*|Search for *foo*|
 |+F|Follow|
 |+G|Go to bottom of file|
-||+ trick works with any command|
+|'''|*+ trick works with any command*|
+|-r|Raw control characters - might be colourful! (Or might break.)|

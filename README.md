@@ -12,8 +12,8 @@ Run `make help` for more options.
 
 If you'd rather not install the dependencies, you can build the sheets in [Docker](https://www.docker.com/):
 
-    docker build -t cheatsheets .
-    docker run -v `pwd`:/app cheatsheets make all
+    docker build -t $(basename $(pwd)) .
+    docker run -v `pwd`:/app $(basename $(pwd)) make all
 
 ## TODO
 

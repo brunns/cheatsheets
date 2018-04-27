@@ -8,7 +8,7 @@
 |INS or I|Insert mode|
 |R|Replace mode|
 
-## Comands (in command mode)
+## Commands (in command mode)
 
 |**Command**|**Function**|
 |-|-|

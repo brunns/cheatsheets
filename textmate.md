@@ -58,7 +58,7 @@
 |-|-|
 |⌥⌘m|Start/stop recording macro|
 |⇧⌘m|Playback macro|
-|^⌘m|Start/stop recording permanant macro|
+|^⌘m|Start/stop recording permanent macro|
 
 ## Key
 

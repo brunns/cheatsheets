@@ -25,7 +25,7 @@
 |-|-|
 |C-k|Delete to end of line|
 |C-DEL|Delete next word|
-|M-BKS|Delete pevious word|
+|M-BKS|Delete previous word|
 |M-^|Join with previous line|
 |C-t|Transpose two characters|
 |M-t|Transpose word to right|
@@ -35,7 +35,7 @@
 
 |**Command**|**Function**|
 |-|-|
-|C-space|Start marking|
+|C-space|Start marking[^2]|
 |C-x h|Mark all|
 |C-w|Cut from mark to point|
 |M-w|Copy "|
@@ -43,8 +43,6 @@
 |C-y|Paste ("Yank")|
 |M-y|Paste older items|
 |C-x r t *foo*|Rectangular edit - type *foo*| 
-
-Control & cursor keys work for marking regions too, followed by C-w or M-w or so forth.
 
 ### Case Conversion
 
@@ -56,7 +54,7 @@ Control & cursor keys work for marking regions too, followed by C-w or M-w or so
 |C-x C-l|Convert region to lower case (downcase-region)|
 |C-x C-u|Convert region to upper case (upcase-region)|
 
-## Search and Replace
+### Search and Replace
 
 |**Command**|**Function**|
 |-|-|
@@ -66,7 +64,7 @@ Control & cursor keys work for marking regions too, followed by C-w or M-w or so
 |ESC C-r|Regexp backwards|
 |M-v replace-regexp RET *pattern* RET *replacement*|Regexp replace|
 
-### Query replace
+#### Query replace
 
 |**Command**|**Function**|
 |-|-|
@@ -144,6 +142,7 @@ I.e. record and playback
 |**Symbol**|**Key**|
 |-|-|
 |C|Ctrl|
-|M|Meta, usually Alt.|
+|M|Meta. Usually Alt, often Esc in Mac terminal apps.|
 
 [^1]: Move the line above, and the cursor, both down one line.
+[^2]: Control & cursor keys work for marking regions too, followed by C-w or M-w or so forth.

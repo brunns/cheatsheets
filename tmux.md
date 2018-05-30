@@ -36,7 +36,7 @@ Start with `screen -dRR` - will reattach or create.
 |^a d|Detach|
 |^a c|New window|
 |^a n|Next window|
-|^a ^a|Switch to last window|
+|^a ^a|Switch to last window (tip: good for toggling between 2 windows)|
 |^a "|Window list & selection|
 |^a k|Kill window|
 |^a S|Split vertically|

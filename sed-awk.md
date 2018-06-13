@@ -41,3 +41,11 @@ Basic structure:
 |`awk '/foo/ {print $0}'`|Print lines matching `foo`. `$0` is the whole line.|
 |`awk '/foo/'`|As above - `print` is the default action.|
 |`awk 'length($0)'`|Pring long lines.|
+
+## grep
+
+|**Command**|**Function**|
+|-|-|
+|`grep foo`|Include only lines condaining `foo`.|
+|`grep -v foo`|Exclide lines containing `foo`.|
+|`awk '/a/ && /b/ && !/c/ && /d/'`|Chained expressions - equivelent to `grep a | grep b | grep -v c | grep d`.|

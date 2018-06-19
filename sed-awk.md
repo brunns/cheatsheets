@@ -1,8 +1,8 @@
-# sed and awk cheatsheet
+# `sed`, `awk`, `grep`, and the like - cheatsheet
 
 `sed` and `awk` both read from stdin (or can be given a filename as an argument) and print to stdout.
 
-## sed
+## `sed`
 
 ### Recipies
 
@@ -17,6 +17,7 @@
 |`sed /foo/a bar`|Append "bar" after lines containing "foo".|
 |`sed s#foo#bar#g`|You don't have you use '/'s for regexes.|
 |`seg G`|Double space input.|
+|`sed -e "/12:00/,/12:10/!d" full.log > wanted.log`|Top 'n' tail a log file by time stamp.|
 
 ### Command line options
 
@@ -25,7 +26,7 @@
 |-n|Supress normal output - use `p` to print|
 |-i|Replace file in place. BSD sed requires a suffix.|
 
-## awk
+## `awk`
 
 Basic structure:
 
@@ -41,11 +42,12 @@ Basic structure:
 |`awk '/foo/ {print $0}'`|Print lines matching `foo`. `$0` is the whole line.|
 |`awk '/foo/'`|As above - `print` is the default action.|
 |`awk 'length($0)'`|Pring long lines.|
+|`awk '/a/ && /b/ && !/c/ && /d/'`|Chained expressions - equivelent to `grep a | grep b | grep -v c | grep d`.|
 
-## grep
+## `grep`
 
 |**Command**|**Function**|
 |-|-|
 |`grep foo`|Include only lines condaining `foo`.|
 |`grep -v foo`|Exclide lines containing `foo`.|
-|`awk '/a/ && /b/ && !/c/ && /d/'`|Chained expressions - equivelent to `grep a | grep b | grep -v c | grep d`.|
+|`grep -o '{.*}'`|Include only part of lines matching pattern. (This example extracts the Json from a log file.|

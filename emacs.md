@@ -30,6 +30,8 @@
 |C-t|Transpose two characters|
 |M-t|Transpose word to right|
 |C-x C-t|Transpose lines[^1]|
+|C-a C-space C-n M-w C-y|Duplicate line|
+|M-^|Join to previous line|
 
 ### Cut 'n' Paste
 
@@ -97,6 +99,10 @@
 |M-g M-g|Goto line|
 |M->|End|
 |M-<|Start|
+|C-a, C-e|Start, end of line|
+|C-f, C-b|Forward, backward one character| 
+|C-n, C-p|Next, previous line|
+|M-f, M-b|Forward, back one word|
 
 ## Macros
 

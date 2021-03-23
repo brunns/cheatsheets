@@ -12,7 +12,7 @@ dotimages: $(dotpngs)  ## Generate all graphviz images
 	soffice --convert-to pdf $< --headless
 
 %.odt: %.md images  ## Make ODT
-	pandoc $< -o $@ --normalize --reference-odt=template/reference.odt
+	pandoc $< -o $@ --reference-doc=template/reference.odt
 
 %.png: %.dot ## Make graphviz image
 	dot -Tpng -o $@ $<

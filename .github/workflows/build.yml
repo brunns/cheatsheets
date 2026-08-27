@@ -1,0 +1,29 @@
+name: Build Cheatsheets
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-and-generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t cheatsheets .
+
+      - name: Generate PDFs
+        run: docker run --rm -v ${{ github.workspace }}:/app cheatsheets make all 
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cheatsheet-pdfs
+          path: "*.pdf"
+          if-no-files-found: error

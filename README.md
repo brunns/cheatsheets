@@ -1,10 +1,10 @@
 # Simon's Cheatsheets
 
-Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org) and [typst](https://typst.app). 
+Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org), [typst](https://typst.app), and [Mermaid](https://mermaid.ai). 
 
 ## Usage
 
-Create and/or edit the `*.md` files, and run `make all` to generate PDFs. For formatting, edit the page settings and/or styles in [template/template.typ](template/template.typ).
+Create and/or edit the `*.md` and `*.mermaid` files, and run `make all` to generate PDFs. For formatting, edit the page settings and/or styles in [template/template.typ](template/template.typ).
 
 Run `make help` for more options.
 

@@ -8,7 +8,8 @@ RUN apk add --no-cache \
     pandoc \
     graphviz \
     openjdk21-jre \
-    libreoffice \
+    libreoffice-writer \
+    font-opensans \
     font-dejavu \
     font-noto-symbols \
     font-noto-extra

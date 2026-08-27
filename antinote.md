@@ -18,16 +18,18 @@
 |⌘d|Delete|
 |↓ or →|Cursor at start|
 |↑ or ←|Cursor at end|
-||Searrc|
 
 ## Editing
 
-|**Command**|**Function**|
+|**Text**|**Effect**|
 |-|-|
 |//|Comment|
-|⌘/|Toggle comment|
 |#, ## or ###|Heading|
 |\*\*bold\*\*, \*italic\*, \~\~strikethrough\~\~, \_\_underline\_\_|Markdown formatting|
+
+|**Command**|**Function**|
+|-|-|
+|⌘/|Toggle comment|
 |⌘b|Bold|
 |⌘i|Italic|
 |⌘u|Underline|
@@ -51,7 +53,7 @@
 
 ### List
 
-|**Command**|**Function**|
+|**Text**|**Effect**|
 |-|-|
 |list: Optional Title|(As 1st line) Make note a list|
 |[]|Prefix to make line a checkbox|
@@ -59,7 +61,7 @@
 
 ### Maths
 
-|**Command**|**Function**|
+|**Text**|**Effect**|
 |-|-|
 |maths|(As 1st line) Activate calculation|
 |=|Suffix to trigger canculation|
@@ -69,7 +71,7 @@
 
 ### Code
 
-|**Command**|**Function**|
+|**Text**|**Effect**|
 |-|-|
 |code|(As 1st line) Activate code formatting|
 |code:py|(As 1st line) Activate code formatting in specific language|

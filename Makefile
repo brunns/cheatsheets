@@ -8,18 +8,14 @@ all: $(pdfs)  ## Generate all PDF cheatsheets
 images: dotimages  ## Generate all images
 dotimages: $(dotpngs)  ## Generate all graphviz images
 
-%.pdf: %.odt  ## Make PDF
-	soffice --convert-to pdf $< --headless
-
-%.odt: %.md images  ## Make ODT
-	pandoc $< -o $@ --reference-doc=template/reference.odt
+%.pdf: %.md images  ## Make PDF via Typst
+	pandoc $< -o $@ --pdf-engine=typst --template=template/template.typ
 
 %.png: %.dot ## Make graphviz image
 	dot -Tpng -o $@ $<
 
 clean: ## Clean generated files
 	rm -f *.pdf
-	rm -f *.odt
 	rm -f *.png
 
 help:  ## Show this help

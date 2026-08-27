@@ -25,7 +25,16 @@
 |**Command**|**Function**|
 |-|-|
 |//|Comment|
+|⌘/|Toggle comment|
 |#, ## or ###|Heading|
+|\*\*bold\*\*, \*italic\*, \~\~strikethrough\~\~, \_\_underline\_\_|Markdown formatting|
+|⌘b|Bold|
+|⌘i|Italic|
+|⌘u|Underline|
+|⌘⇧x|Strikethrough|
+|⌘⇧h|Cycle heading level|
+|⌥↑|Move line up|
+|⌥↓|Move line down|
 
 ## Search
 

@@ -21,11 +21,15 @@
 
 ## Editing
 
+### Formatting
+
 |**Text**|**Effect**|
 |-|-|
 |//|Comment|
 |#, ## or ###|Heading|
 |\*\*bold\*\*, \*italic\*, \~\~strikethrough\~\~, \_\_underline\_\_|Markdown formatting|
+
+### Commands
 
 |**Command**|**Function**|
 |-|-|

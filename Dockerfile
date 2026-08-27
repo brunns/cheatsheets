@@ -7,10 +7,24 @@ RUN apk add --no-cache \
     tzdata \
     make \
     pandoc \
-    graphviz \
     typst \
     font-dejavu \
-    font-noto-symbols
+    font-noto-symbols \
+    nodejs \
+    npm \
+    chromium-headless-shell
+RUN npm install -g @mermaid-js/mermaid-cli
+
+RUN cat <<'EOF' > /etc/puppeteer-config.json
+{
+  "executablePath": "/usr/bin/chromium-headless-shell",
+  "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage"
+  ]
+}
+EOF
 
 WORKDIR /app
 COPY . /app

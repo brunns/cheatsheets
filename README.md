@@ -1,21 +1,16 @@
 # Simon's Cheatsheets
 
-Various cheetsheets in [Markdown](https://en.wikipedia.org/wiki/Markdown) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org/) and [LibreOffice](https://www.libreoffice.org/)'s `soffice` command line tool, both of which need to be installed. 
+Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org) and [typst](https://typst.app). 
 
 ## Usage
 
-Create and/or edit the `*.md` files, and run `make all` to generate PDFs. For formatting, edit the page settings and/or styles in [template/reference.odt](template/reference.odt).
+Create and/or edit the `*.md` files, and run `make all` to generate PDFs. For formatting, edit the page settings and/or styles in [template/template.typ](template/template.typ).
 
 Run `make help` for more options.
 
 ### Docker usage
 
-If you'd rather not install the dependencies, you can build the sheets in [Docker](https://www.docker.com/). See "Tasks" below. 
-
-## TODO
-
-I'd like to generate the PDFs directly with pandoc, but this issue - [longtable not compatible with 2-column LaTeX documents](https://github.com/jgm/pandoc/issues/1023) - is preventing me from having tables in multi-column documents, so I'm resorting to `soffice`. Output's not so nice, but it's functional.
-
+If you'd rather not install the dependencies, you can build the sheets in [Docker](https://www.docker.com/). I do. See "Tasks" below. 
 
 ## Tasks
 

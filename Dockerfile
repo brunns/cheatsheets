@@ -1,18 +1,20 @@
-FROM alpine:latest
+FROM debian:trixie-slim
 LABEL maintainer="Simon Brunning <simon@brunn.ing>"
 
 ENV TZ=Europe/London
-RUN apk add --no-cache \
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
-    build-base \
+    build-essential \
     pandoc \
     graphviz \
-    openjdk21-jre \
-    libreoffice-writer \
-    font-opensans \
-    font-dejavu \
-    font-noto-symbols \
-    font-noto-extra
+    libreoffice-writer-nogui \
+    fonts-open-sans \
+    fonts-dejavu \
+    fonts-noto-core \
+    fonts-noto-extra \
+ && rm -rf /var/lib/apt/lists/*
 
-ADD . /app
 WORKDIR /app
+COPY . /app

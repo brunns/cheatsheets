@@ -13,16 +13,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Build Docker image
         run: docker build -t cheatsheets .
 
       - name: Generate PDFs
-        run: docker run --rm -v ${{ github.workspace }}:/app cheatsheets make all 
+        run: docker run --rm -v ${{ github.workspace }}:/app cheatsheets make all
 
       - name: Upload PDF artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: cheatsheet-pdfs
           path: "*.pdf"

@@ -2,8 +2,11 @@ FROM alpine:latest
 LABEL maintainer="Simon Brunning <simon@brunn.ing>"
 
 ENV TZ=Europe/London
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-headless-shell
 
-RUN apk add --no-cache \
+RUN <<EOF
+  apk add --no-cache \
     tzdata \
     make \
     pandoc \
@@ -13,11 +16,15 @@ RUN apk add --no-cache \
     nodejs \
     npm \
     chromium-headless-shell
-RUN npm install -g @mermaid-js/mermaid-cli
 
-RUN cat <<'EOF' > /etc/puppeteer-config.json
+  npm install -g @mermaid-js/mermaid-cli
+  npm cache clean --force
+  rm -rf /root/.npm /tmp/*
+  apk del npm
+EOF
+
+COPY <<'EOF' /etc/puppeteer-config.json
 {
-  "executablePath": "/usr/bin/chromium-headless-shell",
   "args": [
     "--no-sandbox",
     "--disable-setuid-sandbox",

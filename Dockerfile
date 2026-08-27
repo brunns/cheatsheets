@@ -1,10 +1,14 @@
-FROM ubuntu:latest
-MAINTAINER Simon Brunning "simon@brunn.ing"
+FROM alpine:latest
+LABEL maintainer="Simon Brunning <simon@brunn.ing>"
+
 ENV TZ=Europe/London
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN apt-get install build-essential pandoc graphviz openjdk-8-jdk libreoffice-base libreoffice -y --no-install-recommends
+RUN apk add --no-cache \
+    tzdata \
+    build-base \
+    pandoc \
+    graphviz \
+    openjdk21-jre \
+    libreoffice
+
 ADD . /app
 WORKDIR /app
-RUN make all

@@ -36,6 +36,7 @@ fn main() {
 ### Diagrams
 
 ```mermaid
+%%{init: { 'theme': 'default' } }%%
 sequenceDiagram
     Alice->>Bob: Hi Bob.
     Bob-->>Alice: Hi Alice!

@@ -17,3 +17,33 @@
 |-|-|
 |⇧⌘f|Find in project|
 |⌘f|Find|
+
+## Some code
+
+### Python
+
+```python
+print("Hello World!")
+
+def add(a, b):
+    return a + b
+```
+
+### Rust
+
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
+
+## Inline diagram?
+
+Sadly doesn't render.
+
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+```

@@ -1,6 +1,10 @@
 # Simon's Cheatsheets
 
-Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org), [typst](https://typst.app), and [merman](https://typst.app/universe/package/merman/). 
+Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org), [typst](https://typst.app), [merman](https://typst.app/universe/package/merman/), and the [Noto fonts](https://fonts.google.com/noto):
+
+```sh
+brew install pandoc typst font-noto-sans font-noto-sans-symbols
+```
 
 ## Usage
 
@@ -10,11 +14,19 @@ Run `make help` for more options.
 
 ### Docker usage
 
-If you'd rather not install the dependencies, you can build the sheets in [Docker](https://www.docker.com/). I do. See "Tasks" below. 
+If you'd rather not install the dependencies, you can build the sheets in [Docker](https://www.docker.com/). See "Tasks" below. 
 
 ## Tasks
 
-### build-image
+### pdf
+
+Make all PDFs.
+
+```sh
+make all
+```
+
+### docker-image
 
 Build docker image.
 
@@ -22,9 +34,11 @@ Build docker image.
 docker build -t $(basename $(pwd)) .
 ```
 
-### pdf
+### docker-pdf
 
-Make all PDFs.
+Make all PDFs in docker.
+
+Requires: docker-image
 
 ```sh
 docker run -v `pwd`:/app $(basename $(pwd)) make all

@@ -1,17 +1,11 @@
+#import "@preview/merman:0.1.0": show-mermaid-blocks
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
+
 #let brand-color = rgb("#1e3a8a")  // Deep navy for titles/accents
 #let header-bg   = rgb("#f1f5f9")  // Soft gray for table headers
 #let stripe-bg   = rgb("#f8fafc")  // Very light gray for alternating rows
 #let border-color = rgb("#e2e8f0") // Subtle gray for table rules
 #let text-dark   = rgb("#0f172a")  // Off-black for high contrast reading
-
-#import "@preview/merman:0.1.0": show-mermaid-blocks
-
-#show raw.where(lang: "mermaid"): show-mermaid-blocks(
-  width: 100%,
-  theme: (
-    fontFamily: "Open Sans",
-  )
-)
 
 #set page(
   paper: "a4",
@@ -123,6 +117,31 @@
     })
     #table(..fields, ..children) <full-width>
   ]
+}
+
+#show raw.where(lang: "mermaid"): show-mermaid-blocks(
+  width: 100%,
+  theme: (
+    fontFamily: "Noto Sans",
+  )
+)
+
+
+#show raw.where(lang: "fletcher"): it => {
+  let src = it.text.trim()
+  if not src.starts-with("#") {
+    src = "#" + src
+  }
+  eval(
+    src,
+    mode: "markup",
+    scope: (
+      fletcher: fletcher,
+      diagram: diagram,
+      node: node,
+      edge: edge,
+    ),
+  )
 }
 
 $body$

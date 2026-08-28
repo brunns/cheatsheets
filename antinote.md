@@ -26,7 +26,7 @@
 |**Text**|**Effect**|
 |-|-|
 |`//`|Comment|
-|`#`, `##` or `###`|Heading|
+|`#`, `##`, `###`|Heading|
 |`**bold**`, `*italic*`, `~~strikethrough~~`, `__underline__`|Markdown formatting|
 
 ### Commands

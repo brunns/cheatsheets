@@ -55,22 +55,13 @@
   ]
 )
 
-#show raw.where(block: false): it => box(
-  fill: header-bg,
-  inset: (x: 3pt, y: 1pt),
-  radius: 2pt,
-  baseline: 0pt,
-  text(font: "Noto Sans Mono", size: 7pt, fill: brand-color, weight: "medium", it.text)
-)
-
-#show table: it => layout(size => {
+#show table: it => {
   if it.has("label") and it.label == <full-width> {
     return it
   }
 
   let fields = it.fields()
   let children = fields.remove("children", default: ())
-  let is-two-col = false
 
   if "columns" in fields {
     let cols = fields.columns
@@ -83,8 +74,9 @@
     }
 
     if col-count == 2 {
-      is-two-col = true
       fields.columns = (auto, 1fr)
+    } else if col-count == 3 {
+      fields.columns = (auto, 1fr, auto)
     } else if type(cols) == array {
       fields.columns = cols.map(c => if c == auto { 1fr } else { c })
     } else {
@@ -109,23 +101,19 @@
     none
   }
 
-  if is-two-col {
-    let max-w = size.width * 50% - 10pt
-    [
-      #show table.cell.where(x: 0): cell => context {
-        if measure(cell.body).width > max-w {
-          let cell-fields = cell.fields()
-          let body = cell-fields.remove("body", default: none)
-          table.cell(..cell-fields, block(width: max-w, body))
-        } else {
-          cell
-        }
+  [
+    #show table.cell.where(x: 0): cell => layout(size => context {
+      let max-w = size.width * 50% - 10pt
+      if measure(cell.body).width > max-w {
+        let cell-fields = cell.fields()
+        let body = cell-fields.remove("body", default: none)
+        table.cell(..cell-fields, block(width: max-w, body))
+      } else {
+        cell
       }
-      #table(..fields, ..children) <full-width>
-    ]
-  } else {
-    [#table(..fields, ..children) <full-width>]
-  }
-})
+    })
+    #table(..fields, ..children) <full-width>
+  ]
+}
 
 $body$

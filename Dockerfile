@@ -11,7 +11,7 @@ RUN <<EOF
     make \
     pandoc \
     typst \
-    font-dejavu \
+    font-opensans \
     font-noto-symbols \
     nodejs \
     npm \

@@ -14,7 +14,7 @@
 #set columns(gutter: 12pt)
 
 #set text(
-  font: "DejaVu Sans",
+  font: "Open Sans",
   size: 8pt,
   fill: text-dark,
 )
@@ -73,14 +73,20 @@
 
   if "columns" in fields {
     let cols = fields.columns
-    if type(cols) == int {
-      if cols == 2 {
-        fields.columns = (auto, 1fr)
-      } else {
-        fields.columns = (1fr,) * cols
-      }
+    let col-count = if type(cols) == int {
+      cols
+    } else if type(cols) == array {
+      cols.len()
+    } else {
+      1
+    }
+
+    if col-count == 2 {
+      fields.columns = (auto, 1fr)
     } else if type(cols) == array {
       fields.columns = cols.map(c => if c == auto { 1fr } else { c })
+    } else {
+      fields.columns = (auto,) * col-count
     }
   }
 

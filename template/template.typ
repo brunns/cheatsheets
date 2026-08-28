@@ -1,5 +1,6 @@
 #import "@preview/merman:0.1.0": show-mermaid-blocks
 #import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
+#import "@preview/cetz:0.5.2" as cetz: canvas, draw
 
 #let brand-color = rgb("#1e3a8a")  // Deep navy for titles/accents
 #let header-bg   = rgb("#f1f5f9")  // Soft gray for table headers
@@ -126,22 +127,20 @@
   )
 )
 
-
 #show raw.where(lang: "fletcher"): it => {
   let src = it.text.trim()
-  if not src.starts-with("#") {
+  if not (src.starts-with("#") or src.starts-with("//") or src.starts-with("/*")) {
     src = "#" + src
   }
-  eval(
-    src,
-    mode: "markup",
-    scope: (
-      fletcher: fletcher,
-      diagram: diagram,
-      node: node,
-      edge: edge,
-    ),
-  )
+  eval(src, mode: "markup", scope: (fletcher: fletcher, diagram: diagram, node: node, edge: edge))
+}
+
+#show raw.where(lang: "cetz"): it => {
+  let src = it.text.trim()
+  if not (src.starts-with("#") or src.starts-with("//") or src.starts-with("/*")) {
+    src = "#" + src
+  }
+  eval(src, mode: "markup", scope: (cetz: cetz, canvas: canvas, draw: draw))
 }
 
 $body$

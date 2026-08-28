@@ -1,6 +1,6 @@
 # Simon's Cheatsheets
 
-Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org), [typst](https://typst.app), [merman](https://typst.app/universe/package/merman/), [fletcher](https://typst.app/universe/package/fletcher) and the [Noto fonts](https://fonts.google.com/noto):
+Various cheetsheets in [Markdown](https://www.markdownguide.org) format. 3 column documents and PDFs generated with [pandoc](https://pandoc.org), [typst](https://typst.app), [merman](https://typst.app/universe/package/merman/), [fletcher](https://typst.app/universe/package/fletcher), [cetz](https://typst.app/universe/package/cetz) and the [Noto fonts](https://fonts.google.com/noto):
 
 ```sh
 brew install pandoc typst font-noto-sans font-noto-sans-symbols

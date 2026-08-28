@@ -25,9 +25,9 @@
 
 |**Text**|**Effect**|
 |-|-|
-|//|Comment|
-|#, ## or ###|Heading|
-|\*\*bold\*\*, \*italic\*, \~\~strikethrough\~\~, \_\_underline\_\_|Markdown formatting|
+|`//`|Comment|
+|`#`, `##` or `###`|Heading|
+|`**bold**`, `*italic*`, `~~strikethrough~~`, `__underline__`|Markdown formatting|
 
 ### Commands
 
@@ -59,23 +59,23 @@
 
 |**Text**|**Effect**|
 |-|-|
-|list: Optional Title|(As 1st line) Make note a list|
-|[]|Prefix to make line a checkbox|
-|/x|Suffix to check checkbox|
+|`list: Optional Title`|(As 1st line) Make note a list|
+|`[]`|Prefix to make line a checkbox|
+|`/x`|Suffix to check checkbox|
 
 ### Maths
 
 |**Text**|**Effect**|
 |-|-|
-|maths|(As 1st line) Activate calculation|
-|=|Suffix to trigger canculation|
-|sum|(As 1st line) Sum all numbers|
-|average|(As 1st line) Average all numbers|
-|count|(As 1st line) Count lines, words & characters|
+|`maths`|(As 1st line) Activate calculation|
+|`=`|Suffix to trigger canculation|
+|`sum`|(As 1st line) Sum all numbers|
+|`average`|(As 1st line) Average all numbers|
+|`count`|(As 1st line) Count lines, words & characters|
 
 ### Code
 
 |**Text**|**Effect**|
 |-|-|
-|code|(As 1st line) Activate code formatting|
-|code:py|(As 1st line) Activate code formatting in specific language|
+|`code`|(As 1st line) Activate code formatting|
+|`code:py`|(As 1st line) Activate code formatting in specific language|

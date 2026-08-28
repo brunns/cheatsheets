@@ -6,7 +6,12 @@
 
 #import "@preview/merman:0.1.0": show-mermaid-blocks
 
-#show raw.where(lang: "mermaid"): show-mermaid-blocks(width: 100%)
+#show raw.where(lang: "mermaid"): show-mermaid-blocks(
+  width: 100%,
+  theme: (
+    fontFamily: "Open Sans",
+  )
+)
 
 #set page(
   paper: "a4",

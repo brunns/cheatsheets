@@ -7,10 +7,6 @@
 |⌘a|Select All|
 |⌘⇧x|Nuke the site from orbit|
 
-## An image section
-
-![an image](test.png "Test Image")
-
 ## Another section
 
 |**Command**|**Function**|
@@ -18,7 +14,7 @@
 |⇧⌘f|Find in project|
 |⌘f|Find|
 
-## Some code
+## Inline code & mermaid diagrams
 
 ### Python
 
@@ -37,13 +33,11 @@ fn main() {
 }
 ```
 
-## Inline diagram?
-
-Sadly doesn't render.
+### Mermaid
 
 ```mermaid
 sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-    Alice-)John: See you later!
+    Alice->>Bob: Hi Bob.
+    Bob-->>Alice: Hi Alice!
+    Alice-)Bob: See you later.
 ```

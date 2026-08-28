@@ -4,7 +4,7 @@
 #let border-color = rgb("#e2e8f0") // Subtle gray for table rules
 #let text-dark   = rgb("#0f172a")  // Off-black for high contrast reading
 
-#import "@preview/merman:0.1.0": show-mermaid-blocks
+#import "@preview/merman:0.2.0": show-mermaid-blocks
 
 #show raw.where(lang: "mermaid"): show-mermaid-blocks(width: 100%)
 

@@ -7,9 +7,13 @@
 |**Command**|**Function**|
 |-|-|
 |⌘⌥t|Surround with|
-|⌘/|Comment/uncomment |
+|⌘/|Comment/uncomment|
+|⌘d|Duplicate line or selection|
+|⌘x|Delete line or selection|
 |⌥↑|Expand selection|
 |⌥↓|Shrink selection|
+|⌃i|Implement methods|
+|⌃o|Override methods|
 |⌥↵|Intention actions & quick-fixes|
 |⌃⇧j|Smart join|
 |⌘⇧u|Toggle case|

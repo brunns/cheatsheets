@@ -60,4 +60,4 @@ sequenceDiagram
 
 |**Symbol**|**Meaning**|
 |-|-|
-|😋|Yum|
+|:yum:|Yum|

@@ -6,7 +6,7 @@ pdfs := $(patsubst %.md,%.pdf,$(wildcard *.md))
 all: $(pdfs)  ## Generate all PDF cheatsheets
 
 %.pdf: %.md   ## Make PDF via Typst
-	pandoc $< -o $@ --pdf-engine=typst --template=template/template.typ
+	pandoc -f markdown+emoji $< -o $@ --pdf-engine=typst --template=template/template.typ
 
 clean: ## Clean generated files
 	rm -f *.pdf

@@ -116,7 +116,7 @@
 |⌘⇧a|Find action|
 |⌘,|Settings|
 |⌘;|Project settings|
-<!--|⌃⇧y|Code with me|-->
+|⌃⇧y|Code with me (gone! :cry:)|
 
 ## Keys
 

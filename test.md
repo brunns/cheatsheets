@@ -42,3 +42,22 @@ sequenceDiagram
     Bob-->>Alice: Hi Alice!
     Alice-)Bob: See you later.
 ```
+
+## Keys
+
+|**Symbol**|**Key**|
+|-|-|
+|⇧|Shift|
+|⌃|Control|
+|⌘|Command|
+|⌥|Option (Alt)|
+|⎋|Escape|
+|↵|Return|
+|⇥|Tab|
+|↓←↑→|Arrow keys|
+
+## Emoji
+
+|**Symbol**|**Meaning**|
+|-|-|
+|😋|Yum|

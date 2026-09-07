@@ -10,7 +10,8 @@ RUN <<EOF
     pandoc \
     typst \
     font-noto \
-    font-noto-symbols
+    font-noto-symbols \
+    font-noto-emoji
 EOF
 
 WORKDIR /app

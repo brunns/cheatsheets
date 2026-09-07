@@ -41,7 +41,7 @@
 
 |**Command**|**Function**|
 |-|-|
-|⌃⇥|Swtcher|
+|⌃⇥|Switcher|
 |⇧⌘]|Next tab|
 |⇧⌘[|Previous tab|
 |⎋|Focus editor pane|
@@ -97,7 +97,7 @@
 |-|-|
 |F8|Step over|
 |F7|Step into|
-|⇧F7|Smart step into|
+|⇧F7|Smart step into[^ssi]|
 |⌥F8|Force step over[^fso]|
 |⇧F8|Step out|
 |⌥F9|Run to cursor|
@@ -106,6 +106,7 @@
 |⌘⇧F8|View breakpoints|
 |⌘5|Debug tool pane|
 
+[^ssi]: Allows picking which method to step into
 [^fso]: Ignore any breakpoints
 
 ## General

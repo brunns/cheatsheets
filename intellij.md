@@ -8,8 +8,11 @@
 |-|-|
 |⌘⌥t|Surround with|
 |⌘/|Comment/uncomment|
+|⌘x|Cut line or selection|
+|⌘c|Copy|
+|⌘v|Paste|
+|⇧⌘v|Paste recent|
 |⌘d|Duplicate line or selection|
-|⌘x|Delete line or selection|
 |⌥↑|Expand selection|
 |⌥↓|Shrink selection|
 |⌃i|Implement methods|
@@ -21,6 +24,10 @@
 |⌥⇧↓|Move line down|
 |⌘⇧↑|Move block up|
 |⌘⇧↓|Move block down|
+|⇥|Indent line|
+|⇧⇥|Dedent line|
+|⌘-|Collapse block|
+|⌘+|Expand block|
 
 ## Navigation
 
@@ -61,6 +68,7 @@
 |⌘3|Find pane|
 |⌥F7|Find usages|
 |⌘F7|Find usages in file|
+|⌘⇧F7|Highlight usages in file|
 
 ## VCS
 
@@ -68,6 +76,8 @@
 |-|-|
 |⌘k|Commit|
 |⌘t|Pull|
+|⌘d|Show diff|
+|⌘⌥z|Rollback changes|
 |⌘9|VCS tool pane|
 
 ## Refactoring
@@ -79,6 +89,12 @@
 |F5|Copy|
 |⇧F6|Rename|
 |⌘F6|Change signature|
+|⌘⌥n|Inline|
+|⌘⌥m|Extract method/function|
+|⌘⌥v|Extract variable|
+|⌘⌥f|Extract field|
+|⌘⌥c|Extract constant|
+|⌘⌥p|Extract parameter|
 
 ## Run & compile
 
@@ -101,6 +117,7 @@
 |⌥F8|Force step over[^fso]|
 |⇧F8|Step out|
 |⌥F9|Run to cursor|
+|⌘⌥r|Resume|
 |⌥F8|Evaluate expression|
 |⌘F8|Toggle breakpoint|
 |⌘⇧F8|View breakpoints|

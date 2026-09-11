@@ -33,6 +33,12 @@ fn main() {
 }
 ```
 
+### jq
+
+```jq
+.[] | {make, model}
+```
+
 ### Diagrams
 
 ```mermaid

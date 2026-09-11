@@ -2,7 +2,7 @@
 
 Various shell tricks
 
-## History Interaction
+## History Interaction[^refp]
 
 ```
 ![event][:word][:modifier]
@@ -11,6 +11,8 @@ Various shell tricks
     |      '-----------> part     [  :0  :$  :*  :2-3 ... ]
     '------------------> line     [  !!  !-2  !ssh  !?word? ... ]
 ```
+
+[^refp]: Thanks to [A shell exclamation mark is not for yelling. Be lazy.](https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark) for much of this.
 
 ### Event Designators
 
@@ -31,8 +33,8 @@ Example command: `a/b c "d e" f/g/h.i`
 |-|-|-|
 |`n`|*n*th word, zero indexed|`!:1`→`c`|
 |`$`|Last word|`!$`→`f/g/h.i`|
-|`^`|1st word|`!^`→`a/b`|
-|`*`|All but 1st word|`!*`→`c "d e" f/g/h.i`|
+|`^`|1st word|`!^`→`c`|
+|`*`|All but 0th word|`!*`→`c "d e" f/g/h.i`|
 |`n-m`|*n*th to *m*th words, zero indexed|`!:1-2`→`c "d e"`|
 |`n*`|Abbr for `n-$`|`!:2*`→`"d e" f/g/h.i`|
 |`-n`|Abbr for `0-n`|`!:-2`→`a/b c "d e"`|
@@ -51,20 +53,35 @@ Example command: `a/b c "d e" f/g/h.i`
 |`s/from/to/`|Replace `from` with `to`|`!!:t:s/i/x/`→`h.x`|
 |`p`|Print only||
 
-### Recipes & Examples
+### Common uses
 
-+--------------------------+------------------------+
-| **Recipe**               | **Function**           |
-+==========================+========================+
-| `$ mkdir -p foo/bar/baz` | Make directory         |
-|                          |                        |
-| `$ cd !$`                | cd into new directory  |
-+--------------------------+------------------------+
-| `$ touch foo/bar.txt`    | Create file            |
-|                          |                        |
-| `$ cd !$:h`              | cd into new file's dir |
-+--------------------------+------------------------+
++--------------------------+-----------------------------------------+
+| **Recipe**               | **Function**                            |
++==========================+=========================================+
+| `!!`                     | Previous command                        |
++--------------------------+-----------------------------------------+
+| `!str`                   | Most recent command starting with `str` |
++--------------------------+-----------------------------------------+
+| `!?str?`                 | Most recent command containing `str`    |
++--------------------------+-----------------------------------------+
+| `!$`                     | Last argument of previous command[^ad]  |
++--------------------------+-----------------------------------------+
+| `!:0`                    | Script name of previous command         |
++--------------------------+-----------------------------------------+
+| `!$:h`                   | Directory of last argument              |
++--------------------------+-----------------------------------------+
+|  `!$:t`                  | Filename of last argument               |
++--------------------------+-----------------------------------------+
+| `$ mkdir -p foo/bar/baz` | Make directory                          |
+|                          |                                         |
+| `$ cd !$`                | cd into new directory                   |
++--------------------------+-----------------------------------------+
+| `$ touch foo/bar.txt`    | Create file                             |
+|                          |                                         |
+| `$ cd !$:h`              | cd into new file's dir                  |
++--------------------------+-----------------------------------------+
 
+[^ad]: Try also ⌥. or ⎋. on Mac.
 
 ## fc
 
@@ -83,10 +100,25 @@ Example command: `a/b c "d e" f/g/h.i`
 |⌃t|File picker|
 |⌃r|Command history|
 |⌥c|Pick directory & `cd` to it|
-|`somecmd **`⇥|Pick argument for `somecmd`|
+|`somecmd **`⇥|Pick argument[^fzfarg] for `somecmd`|
+
+[^fzfarg]: Files and directories, process IDs, Environment variables of host names depending upon context.
 
 ## Misc
 
 |**Command**|**Function**|
 |-|-|
 |`cd -`|`cd` to previous `pwd`|
+
+## Keys
+
+|**Symbol**|**Key**|
+|-|-|
+|⇧|Shift|
+|⌃|Control|
+|⌘|Command|
+|⌥|Option (Alt)|
+|⎋|Escape|
+|↵|Return|
+|⇥|Tab|
+|↓←↑→|Arrow keys|

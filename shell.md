@@ -109,6 +109,9 @@ Example command: `a/b c "d e" f/g/h.i`
 |**Command**|**Function**|
 |-|-|
 |`cd -`|`cd` to previous `pwd`|
+|`mkdir -p {src,test/{unit,integration}}`|Make directory structure[^curlyexp]|
+
+[^curlyexp]: Curly expansion can be used with other commands - it's the shell doing the expansion, not `mkdir`.
 
 ## Keys
 

@@ -9,12 +9,12 @@
 |⌘⌥t|Surround with|
 |⌘/|Comment/uncomment|
 |⌘x|Cut line or selection|
-|⌘c|Copy|
-|⌘v|Paste|
 |⇧⌘v|Paste recent|
 |⌘d|Duplicate line or selection|
 |⌥↑|Expand selection|
 |⌥↓|Shrink selection|
+|⌥-drag|Column selection|
+|⇧⌘v|Begin column selection|
 |⌃i|Implement methods|
 |⌃o|Override methods|
 |⌥↵|Intention actions & quick-fixes|

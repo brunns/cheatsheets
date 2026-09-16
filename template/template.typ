@@ -1,4 +1,4 @@
-#import "@preview/merman:0.1.0": show-mermaid-blocks
+#import "@preview/merman:0.3.0": show-mermaid-blocks
 // #import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
 // #import "@preview/cetz:0.5.2" as cetz: canvas, draw
 

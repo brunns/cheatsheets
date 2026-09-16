@@ -9,14 +9,17 @@
 |⌘⌥t|Surround with|
 |⌘/|Comment/uncomment|
 |⌘x|Cut line or selection|
+|⌘c|Copy|
+|⌘v|Paste|
 |⇧⌘v|Paste recent|
 |⌘d|Duplicate line or selection|
 |⌥↑|Expand selection|
 |⌥↓|Shrink selection|
-|⌥-drag|Column selection|
-|⇧⌘v|Begin column selection|
+|⌥ drag|Column selection|
+|⇧⌘8|Toggle column selection mode|
 |⌃i|Implement methods|
 |⌃o|Override methods|
+|⌘j|Insert live template|
 |⌥↵|Intention actions & quick-fixes|
 |⌃⇧j|Smart join|
 |⌘⇧u|Toggle case|
@@ -34,6 +37,9 @@
 |**Command**|**Function**|
 |-|-|
 |Double ⇧|Open anything|
+|⇧⌘o|Open file|
+|⌥⌘o|Open at symbol|
+|⌘o|Open at class|
 |⌘e|Recent files|
 |F3|Toggle bookmark|
 |⌘F3|Show bookmarks|

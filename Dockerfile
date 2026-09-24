@@ -1,9 +1,11 @@
-FROM alpine:latest
+FROM alpine:3.24.1
 LABEL maintainer="Simon Brunning <simon@brunn.ing>"
 
 ENV TZ=Europe/London
 
 RUN <<EOF
+  apk update
+  apk upgrade --no-cache
   apk add --no-cache \
     tzdata \
     make \

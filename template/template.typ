@@ -1,4 +1,4 @@
-#import "@preview/merman:0.1.0": show-mermaid-blocks
+#import "@preview/merman:0.4.0": show-mermaid-blocks
 // #import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge
 // #import "@preview/cetz:0.5.2" as cetz: canvas, draw
 
@@ -8,11 +8,22 @@
 #let border-color = rgb("#e2e8f0") // Subtle gray for table rules
 #let text-dark   = rgb("#0f172a")  // Off-black for high contrast reading
 
+#let fold-indicators = {
+  let mark-stroke = 0.5pt + rgb("#94a3b8")
+  let tick-len = 4mm
+
+  for pos in (100% / 3, 100% * 2 / 3) {
+    place(top + left, dx: pos, line(end: (0pt, tick-len), stroke: mark-stroke))
+    place(bottom + left, dx: pos, line(end: (0pt, tick-len), stroke: mark-stroke))
+  }
+}
+
 #set page(
   paper: "a4",
   flipped: true,
-  margin: (x: 0.8cm, y: 0.8cm),
+  margin: (x: 6mm, y: 8mm),
   columns: 3,
+  foreground: fold-indicators,
 )
 
 #set columns(gutter: 12pt)

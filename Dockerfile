@@ -1,4 +1,4 @@
-FROM alpine:3.24.2
+FROM alpine:edge
 LABEL maintainer="Simon Brunning <simon@brunn.ing>"
 
 ENV TZ=Europe/London

@@ -81,52 +81,52 @@
 
 |**Matcher**|**Function**|
 |-|-|
-contains_bytestring()|match if bytestring contains another.
+|contains_bytestring|match if bytestring contains another.|
 
 ### JSON
 
 |**Matcher**|**Function**|
 |-|-|
-json_matching()|match JSON string.
+|json_matching|match JSON string.|
 
 ### Date & time
 
 |**Matcher**|**Function**|
 |-|-|
-is_weekday()|matches date if it’s a weekday.
+|is_weekday|matches date if it’s a weekday.|
 
 ### Database
 
 |**Matcher**|**Function**|
 |-|-|
-has_table()|matches if database has table.
-has_table_with_rows()|matches if database has table with rows matching.
+|has_table|matches if database has table.|
+|has_table_with_rows|matches if database has table with rows matching.|
 
 ### HTML
 
 |**Matcher**|**Function**|
 |-|-|
-has_title()|matches if HTML has title with content.
-has_named_tag()|matches if HTML has tag with name.
-has_id_tag()|matches if HTML has tag with id.
-tag_has_string()|matches if tag has string.
-has_class()|matches if tag has class.
-has_table()|matches if HTML has table.
-has_row()|matches if table has row.
-has_header_row()|matches if table has header row.
-has_id()|matches if tag has id.
-has_attributes()|matches if tag has attributes.
-has_link()|matches if HTML has link.
-has_image()|matches if HTML has image.
+has_title|matches if HTML has title with content.|
+has_named_tag|matches if HTML has tag with name.|
+has_id_tag|matches if HTML has tag with id.|
+tag_has_string|matches if tag has string.|
+has_class|matches if tag has class.|
+has_table|matches if HTML has table.|
+has_row|matches if table has row.|
+has_header_row|matches if table has header row.|
+has_id|matches if tag has id.|
+has_attributes|matches if tag has attributes.|
+has_link|matches if HTML has link.|
+has_image|matches if HTML has image.|
 
 ### Matchers
 
 |**Matcher**|**Function**|
 |-|-|
-mismatches()|matches if matcher mismatches value.
-mismatches_with()|matches if matcher mismatches value with specific message.
-matches()|matches if matcher matches value.
-matches_with()|matches if matcher matches value with specific message.
+mismatches|matches if matcher mismatches value.|
+mismatches_with|matches if matcher mismatches value with specific message.|
+matches|matches if matcher matches value.|
+matches_with|matches if matcher matches value with specific message.|
 
 ### Meta (auto-matchers)
 
@@ -153,62 +153,61 @@ Works only for classes with `__annotations__`; typically manually annotated clas
 
 |**Matcher**|**Function**|
 |-|-|
-has_call()|matches if mock has a specific call.
-call_has_arg()|matches if a call has a specific argument.
-call_has_args()|matches if a call has specific arguments.
+|has_call|matches if mock has a specific call.|
+|call_has_arg|matches if a call has a specific argument.|
+|call_has_args|matches if a call has specific arguments.|
 
 ### Object
 
 |**Matcher**|**Function**|
 |-|-|
-has_repr()|matches if object’s repr() matches.
-has_identical_properties_to()|matches if object has identical properties to another.
-true()|matches if object is truthy.
-false()|matches if object is falsy.
-between()|matches if value is within a range.
+|has_repr|matches if object’s repr() matches.|
+|has_identical_properties_to|matches if object has identical properties to another.|
+|true|matches if object is truthy.|
+|false|matches if object is falsy.|
+|between|matches if value is within a range.|
 
 ### Path
 
 |**Matcher**|**Function**|
 |-|-|
-is_path()|matches a pathlib.Path object.
+|is_path|matches a pathlib.Path object.|
 
 ### Response
 
 |**Matcher**|**Function**|
 |-|-|
-is_response()|matches requests or httpx response.
-
-redirects_to()|matches if response redirects to URL.
+|is_response|matches requests or httpx response.|
+|redirects_to|matches if response redirects to URL.|
 
 ### RSS
 
 |**Matcher**|**Function**|
 |-|-|
-is_rss_feed()|matches if string is a valid RSS feed.
-is_rss_entry()|matches if object is an RSS feed entry.
+|is_rss_feed|matches if string is a valid RSS feed.|
+|is_rss_entry|matches if object is an RSS feed entry.|
 
 ### Scripttest
 
 |**Matcher**|**Function**|
 |-|-|
-is_proc_result()|matches scripttest ProcResult from command execution.
+|is_proc_result|matches scripttest ProcResult from command execution.|
 
 ### SMTP
 
 |**Matcher**|**Function**|
 |-|-|
-is_email()|matches if string is a valid email message.
+|is_email|matches if string is a valid email message.|
 
 ### URL
 
 |**Matcher**|**Function**|
 |-|-|
-is_url()|matches URL strings.
+|is_url|matches URL strings.|
 
 ### Werkzeug Responses
 
 |**Matcher**|**Function**|
 |-|-|
-is_werkzeug_response()|matches Werkzeug TestResponse.
-redirects_to()|matches if response redirects to URL.
+|is_werkzeug_response|matches Werkzeug TestResponse.|
+|redirects_to|matches if response redirects to URL.|

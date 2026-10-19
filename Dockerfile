@@ -1,4 +1,4 @@
-FROM alpine:3.24.1
+FROM alpine:3.24.2
 LABEL maintainer="Simon Brunning <simon@brunn.ing>"
 
 ENV TZ=Europe/London
@@ -10,7 +10,7 @@ RUN <<EOF
     tzdata \
     make \
     pandoc \
-    typst \
+    "typst>=0.15.0" \
     font-noto \
     font-noto-symbols \
     font-noto-emoji

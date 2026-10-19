@@ -71,6 +71,8 @@
 
 ## Running tools
 
+### Ephemeral
+
 |**Command**|**Function**|
 |-|-|
 |`uvx ...`|Shortcut for `uv tool run ...`|
@@ -78,6 +80,11 @@
 |`uvx --from nasa-lsp nasa lint`|run the `nasa` binary installed specifically from the `nasa-lsp` distribution package|
 |`uvx ruff@latest check .`|force downloading and running the latest available release of Ruff|
 |`uvx ruff format wet-bulb.py && uvx ruff check wet-bulb.py --fix-only`|format a file with Ruff and immediately apply any auto-fixable lint issues|
+
+### Persistent
+
+|**Command**|**Function**|
+|-|-|
 |`uv tool install <tool>`|Install a persistent CLI tool into its own isolated environment (e.g., uv tool install ruff)|
 |`uv tool list`|List all globally installed CLI tools and their executables|
 |`uv tool upgrade --all`|Upgrade all globally installed tools to their latest releases|
@@ -108,8 +115,8 @@ Shebang to make standalone script with PEP 723 inline metadata runnable:
 
 |**Command**|**Function**|
 |-|-|
-|`uv export --no-dev --no-emit-project --prune boto3 --python 3.14 --format requirements-txt --output-file requirements.txt`||
-|`uv pip install -r requirements.txt --no-deps --target build --python 3.14`||
+|`uv export --no-dev --no-emit-project --prune boto3 --python 3.14 --format requirements-txt --output-file requirements.txt`|Export dependency (only) list as a `requirements.txt` file, omitting `boto3`.|
+|`uv pip install -r requirements.txt --no-deps --target build --python 3.14`|Install dependencies from `requirements.txt` into `build/` directory.|
 
 Run Marimo editor on Python 3.14 with ad-hoc ephemeral dependencies without modifying `pyproject.toml`
 

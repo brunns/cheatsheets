@@ -49,6 +49,10 @@ sequenceDiagram
     Alice-)Bob: See you later.
 ```
 
+### Images
+
+![Simon Brunning](simon.jpeg)
+
 ## Keys
 
 |**Symbol**|**Key**|

@@ -1,8 +1,7 @@
 default: help
 .PHONY: default help all clean
 
-# Recursively locate all markdown files (ignoring hidden folders like .git)
-srcs := $(shell find . -type f -name '*.md' ! -path '*/.*/*')
+srcs := $(shell find sheets/ -type f -name '*.md')
 pdfs := $(srcs:%.md=%.pdf)
 
 all: $(pdfs)  ## Generate all PDF cheatsheets

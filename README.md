@@ -8,7 +8,7 @@ brew install pandoc typst font-noto-sans font-noto-sans-symbols
 
 ## Usage
 
-Create and/or edit the `*.md` files (including in-line [mermaid](https://mermaid.js.org/) code blocks), and run `make all` to generate PDFs. For formatting, edit the page settings and/or styles in [template/template.typ](template/template.typ).
+Create and/or edit the `*.md` files (including in-line [mermaid](https://mermaid.js.org/) code blocks) in the [sheets/](sheets/) directory, then run `make all` to generate PDFs. For formatting, edit the page settings and/or styles in [template/template.typ](template/template.typ).
 
 Run `make help` for more options.
 

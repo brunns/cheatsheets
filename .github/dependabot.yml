@@ -21,7 +21,7 @@ updates:
           - "*"
 
   - package-ecosystem: "docker"
-    directory: "/tests"
+    directory: "/"
     schedule:
       interval: "monthly"
     labels:

@@ -79,3 +79,16 @@
 |-|-|
 |`code`|(As 1st line) Activate code formatting|
 |`code:py`|(As 1st line) Activate code formatting in specific language|
+
+## Keys
+
+|**Symbol**|**Key**|
+|-|-|
+|⇧|Shift|
+|⌃|Control|
+|⌘|Command|
+|⌥|Option (Alt)|
+|⎋|Escape|
+|↵|Return|
+|⇥|Tab|
+|↓←↑→|Arrow keys|

@@ -27,9 +27,8 @@
 
 |**Command**|**Function**|
 |-|-|
-|`uv run cli -vvv --max-connections 16`|execute a project CLI command or script with verbose output and connection flags|
-|`uv run lint-imports --help`|show help and usage information for `lint-imports` in the project environment|
-|`uv run lint-imports --no-logo --show-timings`|run `lint-imports` suppressing the startup banner and printing timing benchmarks|
+|`uv run cli -vvv --max-connections 16`|execute a project CLI command or project script with arguments|
+|`uv run lint-imports --help`|show help and usage information for the `lint-imports` project script|
 |`uv run ruff check . --fix-only --unsafe-fixes`|run Ruff to automatically apply all lint fixes (including unsafe fixes) without listing remaining errors|
 
 ## Managing dependencies
@@ -62,7 +61,7 @@
 |`uv remove <pkg>`|Remove a package from project dependencies|
 |`uv remove --dev <pkg>`|Remove a package from development dependency group|
 
-## Bumping versions
+## Bumping project versions
 
 |**Command**|**Function**|
 |-|-|
@@ -79,7 +78,6 @@
 |`uvx dddlint lint`|download, cache, and execute `dddlint` in an isolated ephemeral environment|
 |`uvx --from nasa-lsp nasa lint`|run the `nasa` binary installed specifically from the `nasa-lsp` distribution package|
 |`uvx ruff@latest check .`|force downloading and running the latest available release of Ruff|
-|`uvx ruff format wet-bulb.py && uvx ruff check wet-bulb.py --fix-only`|format a file with Ruff and immediately apply any auto-fixable lint issues|
 
 ### Persistent
 
@@ -94,11 +92,11 @@
 
 |**Command**|**Function**|
 |-|-|
-|`uv run script.py`|Run a standalone script, automatically provisioning inline metadata dependencies|
-|`uv add --script script.py httpx2`|Add inline dependency metadata (PEP 723) directly to a standalone script|
-|`uv init --script script.py`|Initialize a standalone script with inline metadata header|
+|`uv init --script script.py`|Initialize a standalone script with inline script metadata|
+|`uv run script.py`|Run a standalone script, automatically provisioning inline script metadata dependencies|
+|`uv add --script script.py httpx2`|Add inline dependency metadata directly to a standalone script|
 
-Shebang to make standalone script with PEP 723 inline metadata runnable:
+Shebang to make standalone script with [PEP 723 inline script metadata](https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata) executable:
 
 ```sh
 #!/usr/bin/env -S uv run
@@ -115,11 +113,17 @@ Shebang to make standalone script with PEP 723 inline metadata runnable:
 
 |**Command**|**Function**|
 |-|-|
-|`uv export --no-dev --no-emit-project --prune boto3 --python 3.14 --format requirements-txt --output-file requirements.txt`|Export dependency (only) list as a `requirements.txt` file, omitting `boto3`.|
-|`uv pip install -r requirements.txt --no-deps --target build --python 3.14`|Install dependencies from `requirements.txt` into `build/` directory.|
+|`uv export --no-dev --no-emit-project --prune boto3 --python 3.15 --format requirements-txt --output-file requirements.txt`|Export dependency (only) list as a `requirements.txt` file, omitting `boto3`.|
+|`uv pip install -r requirements.txt --no-deps --target build --python 3.15`|Install dependencies from `requirements.txt` into `build/` directory.|
 
-Run Marimo editor on Python 3.14 with ad-hoc ephemeral dependencies without modifying `pyproject.toml`
+Run Marimo editor on Python 3.15 with ad-hoc ephemeral dependencies:
 
 ```sh
-uv run --python 3.14 --with "marimo,httpx2,yarl,pandas,polars,numpy,scipy,sympy,matplotlib,metpy,pint,networkx,pydantic,python-dateutil,dotenv,ruff,pytest,altair,duckdb,sqlglot,watchdog" marimo edit --watch marimo_notebook.py
+uv run --python 3.15 --with "marimo,httpx2,yarl,pandas,polars,numpy,scipy,sympy,matplotlib,metpy,pint,networkx,pydantic,python-dateutil,dotenv,ruff,pytest,altair,duckdb,sqlglot,watchdog" marimo edit --watch marimo_notebook.py
+```
+
+Format `script.py`, and apply linting fixes:
+
+```sh
+uvx ruff format script.py && uvx ruff check script.py --fix-only
 ```

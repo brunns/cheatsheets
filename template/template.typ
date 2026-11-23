@@ -52,8 +52,8 @@
 #show heading.where(level: 2): it => block(
   width: 100%,
   stroke: (bottom: 1pt + brand-color),
-  inset: (bottom: 2pt),
-  above: 8pt,
+  inset: (bottom: 4pt),
+  above: 12pt,
   below: 4pt,
   [
     #set text(fill: brand-color, weight: "bold", size: 12pt)
@@ -62,8 +62,8 @@
 )
 
 #show heading.where(level: 3): it => block(
-  above: 6pt,
-  below: 2pt,
+  above: 8pt,
+  below: 4pt,
   [
     #set text(fill: text-dark, weight: "bold", size: 10pt)
     #it.body

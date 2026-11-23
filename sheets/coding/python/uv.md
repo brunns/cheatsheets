@@ -51,8 +51,12 @@
 |**Command**|**Function**|
 |-|-|
 |`uv tree --outdated`|render the dependency tree highlighting dependencies that have newer releases|
+|`uv tree \| less -p foo`|search for package `foo` throughout dependency tree|
+|`uv tree --format json`|Full SBOM[^sbom] in JSON format|
 |`uv sync --upgrade`|update all project dependencies to their latest compatible versions and sync the virtualenv|
 |`uv lock --upgrade-package werkzeug`|re-resolve the lockfile updating specifically `werkzeug` (and its dependencies) to the latest version|
+
+[^sbom]: [Software bill of materials](https://www.ncsc.gov.uk/blog-post/sboms-and-the-importance-of-inventory).
 
 ### Removing
 

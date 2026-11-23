@@ -61,6 +61,12 @@
 |`uv remove <pkg>`|Remove a package from project dependencies|
 |`uv remove --dev <pkg>`|Remove a package from development dependency group|
 
+### Audit
+
+|**Command**|**Function**|
+|-|-|
+|`uv audit`|Audit Python dependencies for known vulnerabilities|
+
 ## Bumping project versions
 
 |**Command**|**Function**|

@@ -23,7 +23,15 @@ If you'd rather not install the dependencies, you can build the sheets in [Docke
 Make all PDFs.
 
 ```sh
-make all
+make all -j8
+```
+
+### clean
+
+Delete all PDFs.
+
+```sh
+make clean
 ```
 
 ### docker-image

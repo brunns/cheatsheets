@@ -37,8 +37,8 @@
 
 |**Command**|**Function**|
 |-|-|
-|`uv add "flask[async]" gunicorn "httpx2[http2]"`|add multiple dependencies with specified optional extras to `pyproject.toml`|
-|`uv add --dev pytest pyhamcrest`|add packages to the development dependency group (`[tool.uv.dev-dependencies]` / `[dependency-groups]`)|
+|`uv add foo "bar[baz]"`|add multiple dependencies with specified optional extras to `pyproject.toml`|
+|`uv add --dev pytest pyhamcrest`|add packages to the development dependency group|
 
 ### Viewing 
 
@@ -93,18 +93,18 @@
 
 |**Command**|**Function**|
 |-|-|
-|`uv tool install <tool>`|Install a persistent CLI tool into its own isolated environment (e.g., uv tool install ruff)|
+|`uv tool install foo`|Install a persistent CLI tool into its own isolated environment (e.g., uv tool install ruff)|
 |`uv tool list`|List all globally installed CLI tools and their executables|
 |`uv tool upgrade --all`|Upgrade all globally installed tools to their latest releases|
-|`uv tool uninstall <tool>`|Remove an installed tool environment|
+|`uv tool uninstall foo`|Remove an installed tool environment|
 
 ## Scripts (PEP 723)
 
 |**Command**|**Function**|
 |-|-|
-|`uv init --script script.py`|Initialize a standalone script with inline script metadata|
-|`uv run script.py`|Run a standalone script, automatically provisioning inline script metadata dependencies|
-|`uv add --script script.py httpx2`|Add inline dependency metadata directly to a standalone script|
+|`uv init --script hello.py`|Initialize a standalone script with inline script metadata|
+|`uv run hello.py`|Run a standalone script, automatically provisioning inline script metadata dependencies|
+|`uv add --script hello.py httpx2`|Add inline dependency metadata directly to a standalone script|
 
 Shebang to make standalone script with [PEP 723 inline script metadata](https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata) executable:
 
@@ -129,11 +129,11 @@ Shebang to make standalone script with [PEP 723 inline script metadata](https://
 Run Marimo editor on Python 3.15 with ad-hoc ephemeral dependencies:
 
 ```sh
-uv run --python 3.15 --with "marimo,httpx2,yarl,pandas,polars,numpy,scipy,sympy,matplotlib,metpy,pint,networkx,pydantic,python-dateutil,dotenv,ruff,pytest,altair,duckdb,sqlglot,watchdog" marimo edit --watch marimo_notebook.py
+uv run --python 3.15 --with "marimo, httpx2, yarl, pandas, polars, numpy, scipy, sympy, matplotlib, metpy, pint, networkx, pydantic, python-dateutil, dotenv, ruff, pytest, altair, duckdb, sqlglot, watchdog" marimo edit --watch marimo_notebook.py
 ```
 
-Format `script.py`, and apply linting fixes:
+Format `hello.py`, and apply linting fixes:
 
 ```sh
-uvx ruff format script.py && uvx ruff check script.py --fix-only
+uvx ruff format hello.py && uvx ruff check hello.py --fix-only
 ```

@@ -45,14 +45,14 @@
 |**Command**|**Function**|
 |-|-|
 |`uv tree`|render the resolved dependency tree for the project|
+|`uv tree | less -p foo`|search for package `foo` throughout dependency tree|
+|`uv tree --format json`|Full SBOM[^sbom] in JSON format|
 
 ### Updating 
 
 |**Command**|**Function**|
 |-|-|
 |`uv tree --outdated`|render the dependency tree highlighting dependencies that have newer releases|
-|`uv tree \| less -p foo`|search for package `foo` throughout dependency tree|
-|`uv tree --format json`|Full SBOM[^sbom] in JSON format|
 |`uv sync --upgrade`|update all project dependencies to their latest compatible versions and sync the virtualenv|
 |`uv lock --upgrade-package werkzeug`|re-resolve the lockfile updating specifically `werkzeug` (and its dependencies) to the latest version|
 
@@ -62,10 +62,10 @@
 
 |**Command**|**Function**|
 |-|-|
-|`uv remove <pkg>`|Remove a package from project dependencies|
-|`uv remove --dev <pkg>`|Remove a package from development dependency group|
+|`uv remove foo`|Remove a package `foo` from project dependencies|
+|`uv remove --dev foo`|Remove a package `foo` from development dependency group|
 
-### Audit
+### Auditing
 
 |**Command**|**Function**|
 |-|-|
@@ -75,7 +75,7 @@
 
 |**Command**|**Function**|
 |-|-|
-|`uv version --bump major\|minor\|patch`|bump the project package version by major, minor, or patch release in `pyproject.toml`|
+|`uv version --bump major|minor|patch`|bump the project package version by major, minor, or patch release in `pyproject.toml`|
 |`version=$(uv version --short)`|extract and store the current bare project version number in a shell variable|
 
 ## Running tools
